@@ -1,0 +1,26 @@
+body{
+    background: linear-gradient(to right top, #0e9ef7, #00bde9, #36d1c5, #a0dea9, #e8e6aa);
+    height: 100vh;
+}
+
+/*card*/
+.bg-white{
+    border-radius:20px;
+    width: 475px;
+    height: 540px;
+}
+
+/*h1*/
+.border-start{
+    font-size: 30px;
+    font-family :Inter, sans-serif;
+    font-weight: bolder;
+
+}
+
+/*input*/
+
+.w-100{
+    border: #E5E5E5, 1px, solid;
+
+}

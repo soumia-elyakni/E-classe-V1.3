@@ -1,0 +1,31 @@
+
+main{
+    position: absolute;
+    z-index: 20;
+    width: calc(100% - 270px);
+    top: 62px;
+    left: 270px;
+}
+
+/* .Atable{
+    position: fixed;
+} */
+
+@media screen and (max-width:920px) {
+    main{
+        left: 0;
+        width: 100%;
+    }
+    
+
+}
+
+@media screen and (max-width:767px){
+    
+    .card {
+        width: 90% !important;
+        margin: 0 auto;
+        
+    }
+    
+}
