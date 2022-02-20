@@ -1,4 +1,11 @@
 <?php
+session_start();
+
+if(!isset($_SESSION['ouvert'])){
+  
+   header("location: index.php");
+   
+   }
 
 
 $connect = mysqli_connect("localhost", "root", "", "e_classe_db");

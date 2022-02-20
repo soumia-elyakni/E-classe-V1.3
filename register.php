@@ -1,5 +1,14 @@
 <?php
 
+
+session_start();
+
+if(!isset($_SESSION['ouvert'])){
+  
+   header("location: index.php");
+}
+  
+
 $connect = new mysqli("localhost", "root", "", "e_classe_db");
 
 if(isset($_POST['save'])){

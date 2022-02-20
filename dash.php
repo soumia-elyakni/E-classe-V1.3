@@ -1,6 +1,6 @@
 <?php
     $connect = new mysqli("localhost", "root", "", "e_classe_db");
-    session_start();
+    
 
 ?>
 
@@ -73,7 +73,7 @@
                 </a>
             </li>
             <li class="link mt-5 ps-3 rounded-3 ">
-                <a href="index.php">
+                <a href="logouat.php">
                     <small>Logout</small>
                     <img class="ms-1" src="images/svg/logout.svg" alt="">
                 </a>

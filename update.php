@@ -1,53 +1,7 @@
 <?php
 $conn = new mysqli('localhost', 'root', '', 'e_classe_db');
-// $slt= "SELECT * FROM students WHERE email= ]" ;
-
-// if($_SERVER['REQUEST_METHOD'] == 'GET'){
-//     $type = $_GET['type'] ?? "";
-//     $index = $_GET['index'] ?? "";
-
-//     if($type == 'update'){
-//         if(isset($index)){
-
-//             $connect =  new mysqli('localhost', 'root', '', 'e_classe_db');
-
-//             $slt = "SELECT * FROM  students WHERE email = $index";
-    
-//             $res = mysqli_query($connect , $slt);
-//             $row = mysqli_fetch_array($res);
-        
-                    // $name = $_GET['name'];
-                    // $email = $_GET['email'];
-                    // $phone = $_GET['phone'];
-                    // $enroll_number = $_GET['enroll_number'];
-                    // $date_of_admission = $_GET['date_of_admission'];
-            
-            
-//         }
-//     }
-    
-
-// }
- 
 
 
- /*if(isset($_GET['sub'])){
-    $id=$_GET['id'];
-   $name=$_POST['name'];
-   $email=$_GET['email'];
-   $phone=$_POST['phone'];
-   $enroll_number=$_POST['enroll_number'];
-   $date_of_admission=$_POST['date_of_admission'];
-
-   $i="update students set name='$name', email='$email', phone='$phone', enroll_number='$enroll_number', date_of_admission='$date_of_admission', where email=$email";
- mysqli_query($connect, $i);
- header('location:stud.php');
-
- }
-
- $s="select * from students where email=$email";
- $qu= mysqli_query($connect, $s);
- $row=mysqli_fetch_assoc($qu);*/
 
 ?>
 

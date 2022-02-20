@@ -1,8 +1,16 @@
 <?php
+session_start();
+
+if(isset($_SESSION['ouvert'])){
+  
+header("location: home.php");
+
+}
+
 if(isset($_POST['signin'])){
   if(!empty($_POST['email']) && !empty($_POST['pass'])){ 
   $connect = new mysqli("localhost", "root", "", "e_classe_db");
-  if ($conn->connect_error) {
+  if ($connect->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
   $email = $_POST['email'];
@@ -10,7 +18,7 @@ if(isset($_POST['signin'])){
  $sql="SELECT * FROM comptes WHERE email = '$email' AND pass = '$pass'";
  $read =$connect-> query($sql); 
  if($read -> num_rows > 0){
-   session_start();
+   
    $resl = mysqli_fetch_assoc($read);
    $_SESSION['email'] = $resl['email'];
    $_SESSION['name'] = $resl['name'];
@@ -18,6 +26,8 @@ if(isset($_POST['signin'])){
      setcookie('email', $email, time() + 3600*24);
      setcookie('pass', $pass, time() + 3600*24);
     }
+    
+    $_SESSION['ouvert'] = "true";
     header("location:home.php");
   }
   else {
@@ -30,6 +40,8 @@ else {
   $_SESSION["message_error"] = "Remplissez les champs";
 }
 }
+
+
 ?>
 
 <!DOCTYPE html>
