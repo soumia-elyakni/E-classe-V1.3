@@ -1,16 +1,12 @@
 <?php
 
-if(empty($_SESSION)){
-   header("location: index.php");
-   die();
-}
-
-else{
 
 $connect = mysqli_connect("localhost", "root", "", "e_classe_db");
 if($connect -> connect_error) {
   die("connection failed :".$connect -> connect_error);
 }
+
+
 $students=$connect->query("SELECT COUNT(id) As NumberOfStudent FROM students");
 $student= $students->fetch_array() ;
 $student= $student[0];
@@ -87,6 +83,6 @@ $compte= $compte[0];
            </div>
          </div>
     </main>
-    <?php } ?>
+    
 </body>
 </html>

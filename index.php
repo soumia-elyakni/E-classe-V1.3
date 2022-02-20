@@ -2,13 +2,16 @@
 if(isset($_POST['signin'])){
   if(!empty($_POST['email']) && !empty($_POST['pass'])){ 
   $connect = new mysqli("localhost", "root", "", "e_classe_db");
+  if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
   $email = $_POST['email'];
   $pass = $_POST['pass'];
  $sql="SELECT * FROM comptes WHERE email = '$email' AND pass = '$pass'";
  $read =$connect-> query($sql); 
- if(mysqli_num_rows($read) != 0){
+ if($read -> num_rows > 0){
    session_start();
-   $resl = mysqli_fetch_array($read);
+   $resl = mysqli_fetch_assoc($read);
    $_SESSION['email'] = $resl['email'];
    $_SESSION['name'] = $resl['name'];
    if(isset($_POST['box'])){
