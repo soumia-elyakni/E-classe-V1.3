@@ -1,13 +1,11 @@
 <?php
 
-
 session_start();
-
-if(!isset($_SESSION['ouvert'])){
+if(isset($_SESSION['ouvert'])){
   
-   header("location: index.php");
-}
+  header("location: home.php");
   
+  }
 
 $connect = new mysqli("localhost", "root", "", "e_classe_db");
 
@@ -54,7 +52,7 @@ header("location : index.php ");
                 <label for="name">
                   <span>Your Name:</span>
                 </label>
-                <input type="text" id="pass" name="pass" class="w-100 p-1 mt-2  text-muted" placeholder="Enter your name">
+                <input type="text" id="pass" name="name" class="w-100 p-1 mt-2  text-muted" placeholder="Enter your name">
             
                 <label for="email">
                   <span>Email :</span>
