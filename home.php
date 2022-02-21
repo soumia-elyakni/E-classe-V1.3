@@ -15,19 +15,19 @@ if($connect -> connect_error) {
 
 
 $students=$connect->query("SELECT COUNT(id) As NumberOfStudent FROM students");
-$student= $students->fetch_array() ;
+$student= $students->fetch_array();
 $student= $student[0];
 
 $courses=$connect->query("SELECT COUNT(title) As NumberOfCourse FROM courses");
-$course= $courses->fetch_array() ;
+$course= $courses->fetch_array();
 $course= $course[0];
 
 $payments=$connect->query("SELECT SUM(amount_paid) As NumberOfAmount FROM payements");
-$payment= $payments->fetch_array() ;
+$payment= $payments->fetch_array();
 $payment= $payment[0];
 
 $comptes=$connect->query("SELECT COUNT(email) As NumberOfEmail FROM comptes");
-$compte= $comptes->fetch_array() ;
+$compte= $comptes->fetch_array();
 $compte= $compte[0];
 
 
